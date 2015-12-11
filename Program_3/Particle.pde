@@ -22,11 +22,11 @@ class Particle{
   void drawParticle(){
     
     noStroke();
-    color pixel = car.get(int(coords.x),int(coords.y)); // create color variable and use .get on car image to get the colour of individual pixels. Store them in c
-    fill(pixel); // each particle will now be filled with the pixel colour stored in c
+    color pixelColour = car.get(int(coords.x),int(coords.y)); // create color variable and use .get on car image to get the colour of individual pixels. Store them in c
+    fill(pixelColour); // each particle will now be filled with the pixel colour stored in c
     ellipse(coords.x, coords.y, diameter, diameter);
     
-    if(pixel == 0){ //if statement that if the colour in pixel =black then change the fill colour to red and draw ellipse
+    if(pixelColour == 0){ //if statement that if the colour in pixel =black then change the fill colour to red and draw ellipse
       
       fill(255,0,0); // red colour
       ellipse(coords.x, coords.y, diameter *2, diameter); //draw ellipse (particle)
